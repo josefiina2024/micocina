@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background-color: gray;
+    min-height: 100vh;
+    position: relative;
+    font-family: cursive, sans-serif;
+    color: #8ed29b;
+}
+
+.dropdown{
+background-color: grey;
+}
+
+.navbar {
+    background-color: grey;
+}
+
+.navitems a {
+    color: #8ed29b;
+}
+
+.subtitulos {
+    color: #8ed29b;
+}
+
+.tabla {
+    height: 40vw;
+}
+
+img {
+    filter: blur(3px);
+    transition: filter 0.3s ease;
+}
+
+img:hover {
+    filter: blur(0);
+}
+
+ul.list{
+    background-color: grey;
+}
+
+ul.list li{
+    color: #8ed29b;
+}

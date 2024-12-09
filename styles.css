@@ -1,0 +1,527 @@
+@font-face {
+    font-family: 'Merriweather'; 
+    src: url('./Merriweather/Merriweather-Regular.ttf') format('ttf');
+  }
+
+body {
+    margin: 0;
+    background-color: #ffffeb;
+    min-height: 100vh;
+    position: relative;
+    font-family: skia, sans-serif;
+}
+
+/*no funciona*/
+body {
+    scroll-padding-top: 100px;
+    /* Matches the height of the fixed navbar */
+}
+
+/*comidas y gallerias en el index y en la tabla de conversiones*/
+.container {
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 85vh;
+}
+
+/*navbar*/
+.navbar {
+    border-bottom: solid 2px black;
+    list-style-type: none;
+    background-color: #ffffeb;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navitems a {
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+}
+
+.navitems div:hover a {
+    color: rgb(122, 155, 128);
+}
+
+.navitems {
+    display: flex;
+    gap: 17px;
+    justify-content: flex-end;
+    padding: 25px;
+}
+
+.navrecetas {
+    position: relative;
+    /* For positioning dropdowns relative to the parent */
+    margin: 0 15px;
+}
+
+.dropdown {
+    position: absolute;
+    /* que salga abajo del navbar*/
+    border: 1px solid #ddd;
+    display: none;
+    background-color: #ffffeb;
+    /* que no se vea siempre */
+    padding: 10px 0;
+    z-index: 100;
+    border: 3px solid;
+    border-color: rgb(122, 155, 128);
+    border-radius: 5px; 
+    font-size: 8px; 
+    max-width: 300px; 
+}
+
+
+.dropdown a {
+    display: block;
+    /* Stack the links vertically */
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.navrecetas:hover .dropdown {
+    display: block;
+}
+
+.comida {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    margin-left: 17px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffeb;
+}
+
+li {
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+}
+
+/*contactbar*/
+.contactbar {
+    /*por ahora esto no sirve*/
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-top: solid 2px black;
+    bottom: 0;
+}
+
+.contactmail {
+    font-size: 18px;
+}
+
+.contactitems {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 0px;
+}
+
+.contactitems img {
+    width: 34px;
+    height: 34px;
+}
+
+/*imagen grande mi cocina*/
+.banner {
+    background-image: url('image/pint.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 20px;
+}
+
+/*cuerpo del index*/
+.subtitulos {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.circulos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0%;
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+.imagenytitulo:hover {
+    transform: scale(1.05);
+}
+
+.circulos img {
+    width: 220px;
+}
+
+.imagenytitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenytitulo p {
+    font-size: 30px;
+
+}
+
+.conjuntodestacadas img:hover {
+    transform: scale(0.95);
+}
+
+.conjuntodestacadas {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    scroll-behavior: smooth;
+}
+
+.conjuntodestacadas img {
+    max-width: 200px;
+    height: 300px;
+    scroll-snap-align: start;
+    border-radius: 5px;
+}
+
+/*conversiones*/
+.tabla {
+    width: 50vw;
+    height: 33vw;
+    background-color: #7a9b80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.tabla table,
+td,
+th {
+    border: 1px solid;
+    width: 5px;
+    color: black;
+    width: 40vw;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.tabla th {
+    font-size: 30px;
+
+    color: #ffffeb;
+}
+
+.tabla td {
+    font-size: 20px;
+
+    text-align: center;
+    color: #ffffeb;
+}
+
+/*galleria de imagenes en index*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.gallery-item {
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    font-size: 30px;
+}
+
+/*paginas recetas*/
+#salado {
+    margin-bottom: 2%;
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+.imagenindividual {
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.blackline {
+    width: 98%;
+    height: 2px;
+    background-color: black;
+    margin-left: 1%;
+}
+
+/*ingredientes*/
+.sub {
+    text-decoration: none;
+    font-size: x-large;
+    margin-top: 5%;
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    margin-right: 3%;
+}
+
+.textodecuerpo {
+    display: flex;
+    flex-direction: column;
+    font-family: Merriweather;
+}
+
+ul.list {
+    list-style-type: circle;
+}
+
+.list li {
+    font-size: 20px;
+    font-family: Merriweather;
+}
+
+.cuerpo p {
+    font-size: 20px;
+}
+
+.paso {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* contacto - subscribirse */
+.subscribir {
+    background-color: rgb(122, 155, 128);
+    border-radius: 16px;
+    padding: 18px;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 110px;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 110px;
+}
+
+.contenidosubscribirse h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contenidosubscribirse p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.subscribirformulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.subscribirformulario input {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #000;
+    font-size: 1rem;
+}
+
+.subscribirformulario button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribirformulario button:hover {
+    transform: scale(1.5);
+}
+
+.recibirasrecetas {
+    margin-top: 20px;
+}
+
+.recibirasrecetas p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* contacto - contacto */
+.contactanos p{
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.socialmedia img{
+    width:20px;
+    height:20px;
+}
+
+.socialmediaitems{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.contacto .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+  
+/*compartinos tu receta*/
+.compartirreceta{
+    background-color: rgb(122, 155, 128);
+    border-radius: 16px;
+    padding: 18px;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contenidoreceta h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contenidoreceta p{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 110px;
+    font-size: 20px;
+}
+
+.bulletsformulario{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 110px;
+    gap: 10px;
+    font-size: 17px;
+}
+
+.bullets{
+    display:flex;
+    flex-direction: row;
+    row-gap: 2px;
+}
+
+.envianosformulario{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-left: 110px;
+}
+
+.envianosformulario input {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #000;
+    font-size: 1rem;
+}
+
+.buttonsubmit {
+    color: white; 
+    border: none; 
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  
+.envianosformulario button:hover {
+    transform: scale(1.5);
+}
+  

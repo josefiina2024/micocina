@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">Mi Cocina</div>
+        <div class="navitems">
+            <div><a href="index.html">Home</a></div>
+            <div class="navrecetas">
+                <div><a href="index.html#recetas" class="comida">Recetas</a></div>
+                <div class="dropdown">
+                    <a href="index.html#saladits">Salado</a>
+                    <a href="index.html#dulce">Dulce</a>
+                    <a href="index.html#bebidas">Bebida</a>
+                </div>
+            </div>
+            <div><a href="contacto.html">Contacto</a></div>
+        </div>
+    </div>
+    <div class="subscribir">
+        <div class="contenidosubscribirse">
+            <h2>Suscribite</h2>
+            <p>Dejanos tu mail</p>
+            <form action="#" class="subscribirformulario">
+                <input type="email" placeholder="Tu mail" required>
+                <button type="submit">
+                    ➔
+                </button>
+            </form>
+        </div>
+        <div class="recibirasrecetas">
+            <p>Recibiras las recetas semanales y todas las otras novedades que tengamos</p>
+        </div>
+        <div class="contactanos">
+            <p>garcia.josefina1075@gmail.com</p>
+        </div>
+        <div class="socialmedia">
+            <div class="socialmediaitems">
+                <a href="https://www.facebook.com/" target="_blank"> <img src="./image/faceb.png" alt="logo facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="./image/insta.png" alt="logo instagram"></a>
+                  </div>
+        </div>
+    </div>
+    
+     <!--Envianos tu receta-->
+    <div class="compartirreceta">
+        <div class="contenidoreceta">
+            <h2>Envianos tu receta</h2>
+            <p>Cual es el nombre de tu receta?</p>
+            <form action="#" class="envianosformulario">
+                <input type="text" placeholder="Nombre de tu receta" required>
+            </form>
+        </div>
+        <div class="contenidoreceta">
+            <p>Quien es el creador de la receta?(No obligatorio)</p>
+            <form action="#" class="envianosformulario">
+                <input type="text" placeholder="Nombre del creador">
+            </form>
+        </div>
+        <div class="contenidoreceta">
+            <p>De que categoria es tu receta?</p>
+            <form action="#" class="bulletsformulario">
+                <div class="bullets">
+                    <input type="radio" id="Salado" name="categoria" value="Salado">
+                    <label for="Salado">Salado</label><br>
+                </div>
+                <div class="bullets">
+                    <input type="radio" id="Dulce" name="categoria" value="Dulce">
+                    <label for="Dulce">Dulce</label><br>
+                </div>
+                <div class="bullets">
+                    <input type="radio" id="Bebida" name="categoria" value="Bebida">
+                    <label for="Bebida">Bebida</label>
+                </div>
+            </form>
+        </div>
+        <div class="contenidoreceta">
+            <p>Ingredientes</p>
+            <form action="#" class="envianosformulario">
+                <textarea id="ingredients" name="ingredients" rows="6" placeholder="1 taza de azúcar,      2 huevos..." required></textarea>
+            </form>
+        </div>
+        <div class="contenidoreceta">
+            <p>Inserta una foto de tu receta</p>
+            <form action="#" class="envianosformulario">
+                <input type="file" id="recipe-image" name="recipe-image" accept="image/*" required>
+            </form>
+        </div>
+        <div class="buttonsubmit">
+            <form action="/submit" method="POST">
+                <button type="button">Aceptar</button>
+              </form>
+        </div>
+    </div>
+
+
+</html>
